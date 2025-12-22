@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<title>Sellers Page </title>
+<style>
+    form{
+        background-color: rgb(156, 248, 218);
+        font-size:24px ;
+        font-family:'Times New Roman', Times, serif;
+        width:700px;
+        height:auto;
+        
+    }
+</style>
+</head>
+<body>
+<h1> Sellers Page </h1>
+<div>
+<form action="\s.php" method="get" target="_self">
+    <h2> Seller Details</h2>
+<label for="name"> Name : </label>
+<input type="text" placeholder="Seller Name" name="seller name" maxlength="20" required><br><br>
+<label for="dob">Date of Birth </label>
+<input type="date" name="dob" required><br><br>
+
+<label for="phone"> Phone Number : </label>
+<input name="phone" type="tel" placeholder="1234567890" pattern="[0-9]{10}" required><br><br>
+<label for="phone"> Alternate Phone Number : </label>
+<input name="phone" type="tel" placeholder="1234567890" pattern="[0-9]{10}" ><br><br>
+<label for="email"> Email : </label>
+<input type="email" name="email" placeholder="renuka@gmail.com"><br><br>
+<label for="address"> Address : </label>
+<textarea rows="5" cols="30">Type ur address here</textarea><br><br>
+<input type="radio" name="location" value="urban" required> Urban
+    <input type="radio" name="location" value="rural" required> Rural<br><br>
+<label for="item"> Category : </label>
+<input type="checkbox" name="Sweets">SWEETS
+<input type="checkbox" name="Snacks">SNACKS
+<input type="checkbox" name="Pickles">PICKLES<br><br>
+<label for="item"> Items Sold : </label>    
+<input type="text" name="items" placeholder="Laddoo, Gulab Jamun etc" required><br><br>
+<label for="max_cost"> Maximum Cost for Item mentioned  : </label>
+<input type="number" name="max_cost" min="0" required><br><br>
+<label for="min_cost"> Minimum Cost for Item mentioned  : </label>
+<input type="number" name="min_cost" min="0" required><br><br>
+<label for="type"> Type of Business : </label>
+<fieldset name="type">
+    <input type="radio" name="Individual" >Individual
+    <input type="radio" name="Partnership" >Partnership   
+</fieldset>
+<fieldset>
+    <input type="radio" name="Beginner" >Beginner
+    <input type="radio" name="Intermediate" >Intermediate   
+    <input type="radio" name="Expert" >Expert
+</fieldset>
+<label for="experience"> Experience (in years) : 
+</label>
+<input type="number" name="experience" min="0" max="50" required><br><br>
+<label for="item"> Total Sales in last year : </label>
+<input type="number" name="total sales" placeholder="in Rupees" required><br><br>
+<label for="rating"> Rating : </label>
+<input type="number" name="rating" placeholder="1 to 5" min="1" max="5" required><br><br>
+
+<label for="license">Upload Food License</label>
+<input type="file" name="license" required><br><br>
+<label for="photograph"> Photograph</label>
+<input type="file" name="photograph" ><br><br>
+<input type="submit" name="submit"><br><br>
+<input type="reset" name="reset"><br>  <br>
+
+</form>
+</div>
+</body>
+</html>
