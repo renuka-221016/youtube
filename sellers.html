@@ -4,71 +4,189 @@
 <title>Sellers Page </title>
 <style>
     form{
-        background-color: rgb(156, 248, 218);
+        background-color: rgb(248, 247, 156);
         font-size:24px ;
         font-family:'Times New Roman', Times, serif;
-        width:700px;
+        width:100%;
         height:auto;
+        padding:20px;
+    }
+    .div2{
+        margin-top:0px;
+        padding-left: 10px;
         
+    }
+    fieldset{
+        margin-bottom: 15px;
+        padding:10px;
+        border-color:rgb(3, 2, 90);
+    }
+    legend{
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(0, 7, 10);
+        text-align: center;
+    }
+    fieldset:hover{
+
+    }
+    .div1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(0, 7, 10);
+        position:-webkit-sticky;
+        position:sticky;
+        top:0;
+    }
+    .div1 div a:hover{
+        color:lightblue;
+        border-color:white;
+        border-width:2px;
+        font-size:25px;
+    }
+    .div1 div{
+        margin: 10px;
+        border-color:rgb(189, 186, 186);
+        border-radius:5px;
+        border-width: 3px;;
+    }
+    div a{
+        text-decoration: none;
+        color:white;
+        font-size:23px;
+    }
+    .div3{
+        display:flex;
+    }
+    .div3 div{
+        height:430px;
+        width:25%;
+        background-color: azure;
+        border:2px solid black;
+        padding-top:1px;
+        padding-left:5px;
+        margin:5px;
+    }
+    .div3 h4{
+        text-align: center;
+        font-weight: bold;
+        font-size:26px;
+        font-family:'Courier New', Courier, monospace;
+        padding-top:1px;
+        margin:5px;
     }
 </style>
 </head>
 <body>
-<h1> Sellers Page </h1>
-<div>
-<form action="\s.php" method="get" target="_self">
-    <h2> Seller Details</h2>
+    <div  class="div1"> 
+        <div><a href="#forms"> Want To Be Seller? Fill out this Form </a></div>
+    <div><a href="#details"  > Know The Details Of Sellers</a> </div>
+</div>
+
+<div class="div2">
+<form action="/s.php" method="get" target="_self" >
+    
+    <fieldset>
+        <legend><h3>Seller Details</h3></legend>
 <label for="name"> Name : </label>
 <input type="text" placeholder="Seller Name" name="seller name" maxlength="20" required><br><br>
+
 <label for="dob">Date of Birth </label>
 <input type="date" name="dob" required><br><br>
 
 <label for="phone"> Phone Number : </label>
 <input name="phone" type="tel" placeholder="1234567890" pattern="[0-9]{10}" required><br><br>
+
 <label for="phone"> Alternate Phone Number : </label>
 <input name="phone" type="tel" placeholder="1234567890" pattern="[0-9]{10}" ><br><br>
+
 <label for="email"> Email : </label>
 <input type="email" name="email" placeholder="renuka@gmail.com"><br><br>
+
 <label for="address"> Address : </label>
 <textarea rows="5" cols="30">Type ur address here</textarea><br><br>
+<label for="location"> Location : </label>
 <input type="radio" name="location" value="urban" required> Urban
     <input type="radio" name="location" value="rural" required> Rural<br><br>
-<label for="item"> Category : </label>
-<input type="checkbox" name="Sweets">SWEETS
-<input type="checkbox" name="Snacks">SNACKS
-<input type="checkbox" name="Pickles">PICKLES<br><br>
-<label for="item"> Items Sold : </label>    
-<input type="text" name="items" placeholder="Laddoo, Gulab Jamun etc" required><br><br>
-<label for="max_cost"> Maximum Cost for Item mentioned  : </label>
-<input type="number" name="max_cost" min="0" required><br><br>
-<label for="min_cost"> Minimum Cost for Item mentioned  : </label>
-<input type="number" name="min_cost" min="0" required><br><br>
-<label for="type"> Type of Business : </label>
+</fieldset>
+<fieldset>
+    <legend><h3> Business Details   </h3></legend >
+    <label for="type"> Type of Business : </label>
 <fieldset name="type">
     <input type="radio" name="Individual" >Individual
     <input type="radio" name="Partnership" >Partnership   
 </fieldset>
+
 <fieldset>
     <input type="radio" name="Beginner" >Beginner
     <input type="radio" name="Intermediate" >Intermediate   
     <input type="radio" name="Expert" >Expert
+
 </fieldset>
-<label for="experience"> Experience (in years) : 
-</label>
+<label for="experience"> Experience (in years) : </label>
 <input type="number" name="experience" min="0" max="50" required><br><br>
+</fieldset>
+<fieldset>
+    <legend><h3> Product Details </h3></legend>
+<label for="item"> Category : </label>
+<input type="checkbox" name="Sweets">SWEETS
+<input type="checkbox" name="Snacks">SNACKS
+<input type="checkbox" name="Pickles">PICKLES<br><br>
+
+<label for="item"> Items Sold : </label>    
+<input type="text" name="items" placeholder="Laddoo, Gulab Jamun etc" required><br><br>
+
+<label for="max_cost"> Maximum Cost for Item mentioned  : </label>
+<input type="number" name="max_cost" min="0" required><br><br>
+<label for="min_cost"> Minimum Cost for Item mentioned  : </label>
+<input type="number" name="min_cost" min="0" required><br><br>
+
 <label for="item"> Total Sales in last year : </label>
 <input type="number" name="total sales" placeholder="in Rupees" required><br><br>
+
+
 <label for="rating"> Rating : </label>
 <input type="number" name="rating" placeholder="1 to 5" min="1" max="5" required><br><br>
+</fieldset>
+<fieldset>
+    <legend><h3>Proof of Documents  </h3></legend >  
+
 
 <label for="license">Upload Food License</label>
 <input type="file" name="license" required><br><br>
+
 <label for="photograph"> Photograph</label>
-<input type="file" name="photograph" ><br><br>
-<input type="submit" name="submit"><br><br>
+<input type="file" name="photograph" >
+</fieldset><br>
+<fieldset>
+    <legend> <h3>Terms and Conditions</h3> </legend>
+    <input type="checkbox" name="tnc" required> I agree to the terms and conditions
+
+</fieldset> <br>
+<fieldset style="align-items: center;">
+    <input type="submit" name="submit"><br><br>
 <input type="reset" name="reset"><br>  <br>
 
+</fieldset>
+
 </form>
+</div>
+<a name="details" style="text-decoration:none;font-size:24px;color:rgb(3, 3, 77)" href="#top">Know The Seller Details </a> 
+<div class="div3">
+
+    <div><h4>Seller 2</h4>
+        
+           <p>
+            Name:Subbarao<br>
+            Age:38<br>
+
+           </p> 
+        
+    </div>
+    <div><h4>Seller 2</h4></div>
+    <div><h4>Seller 2</h4></div>
+    <div><h4>Seller 2</h4></div>
 </div>
 </body>
 </html>
