@@ -1,0 +1,37 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #fff8f0;
+}
+
+.user-box {
+    background: #ffe0b2;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.recipe-card {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.recipe-card:hover {
+    background: #fff3e0;
+    transform: scale(1.05);
+}
+
+button {
+    margin: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#output {
+    margin-top: 20px;
+    font-weight: bold;
+}

@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Recipes - Kitchen Store</title>
+    <link rel="stylesheet" href="recipes.css">
 </head>
 <body>
-    <h1>recipes page not yet ready</h1>
-    
+
+    <h1>🍲 Premium Recipes</h1>
+
+    <!-- USER INFO -->
+    <div class="user-box">
+        <h3 id="welcomeMsg"></h3>
+        <p>Coins: <span id="coins"></span></p>
+        <button id="buyCoinsBtn">Buy Coins</button>
+    </div>
+
+    <!-- SEARCH -->
+    <input type="text" id="searchInput" placeholder="Search recipes...">
+
+    <!-- RECIPE CARD -->
+    <div class="recipe-card" id="recipeCard">
+        <h2 id="recipeName"></h2>
+        <p id="recipeDesc"></p>
+        <p>Price: ₹<span id="price"></span></p>
+        <p>Status: <span id="status"></span></p>
+
+        <button id="unlockBtn">Unlock Recipe 🔓</button>
+        <button id="discountBtn">Apply Discount</button>
+    </div>
+
+    <!-- OUTPUT -->
+    <div id="output"></div>
+
+    <script src="recipes.js"></script>
 </body>
 </html>
